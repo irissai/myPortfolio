@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+
+}
+
+body {
+    background: #19191B;
+    background-image: url('image/Rectangle.png');
+    background-size: 1000px 700px;
+    /* กำหนดขนาดรูป */
+    background-repeat: no-repeat;
+    /* ไม่วนซ้ำ */
+    background-position: right 220px top 50px;
+    /* ขยับไปทางขวา */
+}
+
+.container {
+    width: 75%;
+    margin: auto auto;
+
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 50px;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px;
+    box-shadow: rgba(73, 73, 128, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(26, 70, 114, 0.35) 0px -2px 6px 0px inset;
+}
+
+nav a {
+    color: #000000;
+    font-size: 0.9vw;
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 12px 12px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1.5vw;
+
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 2.2vw !important;
+        text-decoration: none;
+        margin: 0 5px;
+
+    }
+}
+
+nav a:hover {
+    color: #00B7FF;
+}
+
+nav a.active {
+    background-color: #00B7FF;
+    padding: 12px 12px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.sections {
+    position: relative;
+    top: 170px;
+
+}
+
+section {
+    min-height: 85vh;
+    scroll-margin-top: 140px;
+}
+
+.Introduction p, .AboutMe p, 
+.Projects p, .Skills p, 
+.CertificatesAwards p, .Contact p {
+    color: #00B7FF;
+    font-size: 2.5vw;
+    font-family: "ADLaM Display", system-ui;
+}
+
+/* ----------------------------------  Introduction  ------------------------------------- */
+
+.img-me {
+    width: 100vw;
+    max-width: 17vw;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.04) 0px 0px 0px 20px;
+}
+
+.card {
+    display: flexbox;
+    width: 50%;
+}
+
+.bt-bottom-img {
+    display: flex;
+    justify-content: space-between;
+    width: 17vw;
+    margin-top: 15px;
+}
+
+.bt-contact,
+.bt-resume {
+    font-size: 0.8vw;
+    border: none;
+    border-radius: 10px;
+    width: 8.3vw;
+    padding: 10px 3px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.bt-contact {
+    color: #000000;
+    background-color: #00b7ff;
+}
+
+.bt-resume {
+    color: #fff;
+    background-color: rgba(0, 183, 255, 0.1);
+}
+
+#Introduction {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+}
+
+
+
+/* ----------------------------------  Projects  ------------------------------------- */
+
+.h-blue {
+    font-weight: bold;
+    color: #4bccff;
+}
+
+.project-detail, .detail {
+ font-size: 1vw ;
+    color: #fff ;
+        font-family: "Space Grotesk", sans-serif;
+}
+
+
+.p-detail {
+    font-size: 1vw !important;
+    text-align: center !important;
+    padding: 0 15px !important;
+    color: #fff !important;
+        font-family: "Space Grotesk", sans-serif !important;
+}
+
+.technology {
+    /* padding-top: 70px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #fff;
+}
+
+.vdo {
+    display: flex;
+    justify-content: space-between;
+}
+
+iframe {
+    border-radius: 10px;
+    width: 23vw;
+    height: 27vh;
+    margin: 0 auto;
+}
+
+.vdo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+    width: 40vw;
+}
+
+@media (max-width: 1024px) {
+    iframe {
+        width: 40vw;
+        min-width: 200px;
+        height: auto;
+    }
+
+    .vdo-list {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+    }
+
+    .vdo {
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ----------------------------------  Skills  ------------------------------------- */
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.circle-row {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    margin: 5px 10px;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background-color: #262626;
+    flex-shrink: 0; /* ป้องกันโดนบีบใน flexbox */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-end {
+    color: #fff;
+    margin-bottom: 70px;
+    text-align: center;
+    width: 100%;
+}
+
+.back-end {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    /* ให้ column กว้างเท่าที่จำเป็น */
+    justify-content: space-around;
+    /* ช่องว่างรอบๆ */
+    width: 100%;
+    /* ต้องมี width ถึงจะเห็น effect */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tools {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.p-skills {
+    font-size: 1.2vw !important;
+     color: #fff !important;
+}
+
+.img-skills {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    
+}
+
+.tool-label {
+     font-size: 0.85vw ;
+     color: #fff ;
+}
+
+
+/* ----------------------------------  Certificates & Awards  ------------------------------------- */
+
+
+.CertificatesAwards {
+/* display: block;
+margin: 0 auto; */
+margin-bottom: 140px;
+}
+
+.p-Certificat {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.cert {
+    width: 100%;
+    margin: auto;
+     border-radius: 15px;
+}
+
+.cert-detail {
+
+    width: 80%;
+       margin: auto auto;
+display: flex;
+justify-content: center;
+}
+
+.cert-img {
+    width: 13vw;
+    margin: 15px;
+}
+
+.cert-name {
+     margin: 15px;
+}
+
+.cert-name p {
+     color: #00b7ff;
+     font-size: 1.4vw;
+}
+
+.cert-name .date {
+    color: #ffffff;
+     font-size: 1vw;
+}
+
+.div-project-name {
+    margin-top: 10px ;
+    color: #ffffff;
+     font-size: 1vw;
+}
+
+.hr-cert {
+    width: 80%;
+    background-color: #ffffff30 !important;
+    border: none;
+    height: 1px;
+    justify-content: center;
+}
+
+
+/* ----------------------------------  Contact  ------------------------------------- */
+
+.Contact-info {
+    font-weight: thin !important;
+    color: #fff !important;
+    font-size: 1.2vw !important;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.hr-end {
+    width: 100%;
+    background-color: #00b7ff30 !important;
+    border: none;
+    height: 1px;
+    justify-content: center;
+}
+
+.icon-contact {
+    width: 2vw;
+    height: 2vw;
+    margin-right: 20px;
+}
+
+.Contact-info span a {
+    text-decoration: none;
+    color: #fff;
+}
