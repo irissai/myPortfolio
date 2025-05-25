@@ -5,112 +5,468 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-
-        <header>
-            <nav>
-                <a href="#Introduction" class="active">Introduction</a>
-                <a href="#About Me">About Me</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Skills">Skills</a>
-                <a href="#Certificates & Awards">Certificates & Awards</a>
-                <a href="#Contact">Contact</a>
-            </nav>
-        </header>
-
-
-        <!-------------------------------------------------- Introduction -------------------------------------------------->
-
-        <div class="sections">
-            <section class="Introduction" id="Introduction">
-                <div class="card">
-                    </div>
-                </div>
-
-                <div class="introduction">
-                   
-                </div>
-            </section>
+    <header
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/80 rounded-full shadow-lg px-6 py-3 w-full max-w-[90%] md:max-w-fit">
+        <nav class="flex flex-wrap justify-center items-center gap-x-2 gap-y-1">
+            <a href="#Introduction" class="nav-link">หน้าหลัก</a>
+            <a href="#AboutMe" class="nav-link">ประวัติส่วนตัว</a>
+            <a href="#Projects" class="nav-link">ผลงาน</a>
+            <a href="#Skills" class="nav-link">ทักษะ</a>
+            <a href="#CertificatesAwards" class="nav-link">เกียรติบัตรและรางวัล</a>
+            <a href="#Contact" class="nav-link">ข้อมูลติดต่อ</a>
+        </nav>
+    </header>
 
 
-            <!-------------------------------------------------- About Me -------------------------------------------------->
 
-            <section class="AboutMe" id="About Me">
-                <p style="margin: 100px 0 0 0; text-align: center;">About Me</p>
-            </section>
+    <!-- --------------------------------------------------  Introduction  -------------------------------------------------->
+    <section id="Introduction"
+        class="flex flex-col md:flex-row max-w-6xl mx-auto mt-0 items-center gap-12 bg-black/30 rounded-lg shadow-lg p-8">
 
-
-            <!-------------------------------------------------- Projects -------------------------------------------------->
-
-            <section class="Projects" id="Projects">
-                <p>Projects</p>
-                <div class="project-detail">
-                </div>
-                <div class="technology">
-                    <div class="frontend">
-                    </div>
-                    <div class="backend">
-                    </div>
-                    <div class="tools">
-                     
-                    </div>
-                </div>
-                <div class="detail">
-                  
-                </div><br><br>
-                <div class="vdo">
-                    <div class="vdo-list">
-                       
-                    </div>
-                    <div class="vdo-list">
-                     
-                    </div>
-                    <div class="vdo-list">
-                      
-                    </div>
-                </div>
-            </section>
-
-
-            <!-------------------------------------------------- Skills -------------------------------------------------->
-
-            <section class="Skills" id="Skills">
-                <p>Skills</p>
-                <div class="skill">
-                    <div class="front-end">
-                    </div>
-
-                    <div class="back-end">
-   
-                    </div>
-                    <div class="tools">
-                    </div>
-                </div>
-            </section>
-
-
-            <!-------------------------------------------------- Certificates & Awards -------------------------------------------------->
-
-            <section class="CertificatesAwards" id="Certificates & Awards">
-                <p class="p-Certificat">Certificates & Awards</p>
-             
-            </section>
-
-            <!-------------------------------------------------- Contact -------------------------------------------------->
-
-            <section class="Contact" id="Contact">
-                <p>Contact</p>
-            </section>
+        <!-- Left  -->
+        <div class="intro-left w-full md:w-1/3 flex flex-col items-center space-y-6 text-center">
+            <div class="box-img-me w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-teal-400">
+                <img src="image/me.png" alt="me" class="w-full h-full object-cover" />
+            </div>
+            <div class="bt-bottom-img flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.querySelector('#Contact').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
+                    Contact
+                </button>
+                <a href="path/to/resume.pdf" download
+                    class="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
+                    Download resume
+                </a>
+            </div>
         </div>
 
-        <hr class="hr-end">
+        <!-- Right  -->
+        <div class="introduction w-full md:w-2/3 text-center md:text-left text-gray-200">
+            <p class="text-teal-400 text-xl font-medium mb-1">Web Developer</p>
+            <p class="name text-4xl font-thin text-white mb-6">กัญฐิมา เจริญ</p>
+            <div class="introduction-detail leading-relaxed text-lg">
+                ดิฉันเป็นนักศึกษาจบใหม่จากสาขาเทคโนโลยีสารสนเทศ วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น
+                มีความสนใจในด้านการพัฒนาเว็บไซต์ โดยเฉพาะการเขียนโปรแกรมด้วย HTML, CSS, JavaScript, React และ
+                Node.js
+                <br><br>
+                ดิฉันชื่นชอบการเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอ และมีประสบการณ์ในการพัฒนาโปรเจกต์
+                ทั้งจากการทำโปรเจกต์จบและการแข่งขัน อาทิ การแข่งขัน National Software Contest (NSC) 2024
+                <br><br>
+                ขณะนี้กำลังมองหาโอกาสในการเริ่มต้นทำงานในตำแหน่ง Web Developer
+                <span class="text-teal-300">เพื่อนำความรู้ที่มีไปต่อยอด และเติบโตในสายงานเทคโนโลยีที่ตนเองชอบ</span>
+            </div>
+        </div>
 
+    </section>
+
+
+
+
+    <!--------------------------------------------------  About Me  -------------------------------------------------->
+    <section id="AboutMe" class="max-w-4xl mx-auto mt-40    p-8 bg-black/30   rounded-lg shadow-lg text-gray-200">
+        <h2 class="text-center text-3xl font-medium mb-8 text-teal-400">ประวัติส่วนตัว</h2>
+        <p class="text-lg leading-relaxed indent-12">
+            สวัสดีค่ะ ชื่อ <span class="text-teal-300">กัญฐิมา เจริญ</span> ชื่อเล่น ทราย
+            เป็นนักศึกษาจบใหม่จากสาขาเทคโนโลยีสารสนเทศ วิทยาลัยการคอมพิวเตอร์
+            มหาวิทยาลัยขอนแก่น ดิฉันเริ่มสนใจด้านการพัฒนาเว็บไซต์ ตั้งแต่ช่วงปีที่ 3 ของการศึกษา ขณะทำโปรเจกต์จบ
+            และได้ค้นพบว่าตนเองชอบในการออกแบบ และสร้างเว็บไซต์อย่างแท้จริง โดยเฉพาะการพัฒนาเว็บด้วย HTML, CSS,
+            JavaScript, React และ Node.js ซึ่งเป็นเทคโนโลยีหลักที่ดิฉันใช้ในการเรียนรู้และพัฒนาโปรเจกต์จบ
+        </p>
+        <br />
+        <p class="text-lg leading-relaxed indent-12">
+            นอกจากนี้ ดิฉันยังเป็นคนที่ชื่นชอบการเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอ
+            และมักใช้เวลาว่างในการศึกษาเพิ่มเติมหรือทดลองพัฒนาโปรเจกต์เล็ก ๆ เพื่อฝึกฝนและต่อยอดความสามารถของตนเอง
+        </p>
+        <br />
+        <p class="text-lg leading-relaxed indent-12">
+            เป้าหมายของดิฉันคือการเริ่มต้นอาชีพในสายงาน Web Developer
+            และเติบโตเป็นนักพัฒนาที่สามารถสร้างเว็บไซต์ที่มีคุณภาพ ใช้งานง่าย และตอบโจทย์ความต้อง
+            การของผู้ใช้งานได้อย่างแท้จริงค่ะ
+        </p>
+    </section>
+
+
+
+    <!-- --------------------------------------------------  Projects  -------------------------------------------------->
+    <section id="Projects" class="max-w-5xl mx-auto mt-40  p-8 bg-black/30  rounded-lg shadow-lg text-gray-200">
+        <h2 class="text-center text-3xl font-medium mb-8 text-teal-400">ผลงาน</h2>
+
+        <div class="project-detail mb-6 text-lg leading-relaxed">
+            <p><span class="font-semibold text-teal-300">โปรเจกต์: </span> เว็บแอปพลิเคชันสื่อการสอน เรื่องการเคลื่อนที่ของฟันเทียมสำหรับนักศึกษา และอาจารย์คณะทันตแพทยศาสตร์ มหาวิทยาลัยขอนแก่น</p>
+            <p><span class="font-semibold text-teal-300">ระยะเวลาในการพัฒนา: </span> กรกฎาคม 2566 - มีนาคม 2568 (1
+                ปี 9 เดือน)</p>
+        </div>
+
+        <div class="technology grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div>
+                <h3 class="font-semibold text-teal-300 mb-2">Frontend</h3>
+                <ul class="list-disc list-inside text-lg space-y-1">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>Vanilla CSS</li>
+                    <li>Tailwind CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Canvas API</li>
+                    <li>Fabric.js</li>
+                    <li>AR.js</li>
+                    <li>Three.js</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-teal-300 mb-2">Backend</h3>
+                <ul class="list-disc list-inside text-lg space-y-1">
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>MongoDB</li>
+                    <li>Mongoose</li>
+                    <li>Firebase Realtime Database</li>
+                    <li>Firebase Storage</li>
+                    <li>Socket.IO</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-teal-300 mb-2">Tools & Others</h3>
+                <ul class="list-disc list-inside text-lg space-y-1">
+                    <li>Blender</li>
+                    <li>Adobe Animate</li>
+                    <li>Trios 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail text-lg leading-relaxed mb-8">
+            <p><span class="font-semibold text-teal-300">วัตถุประสงค์:
+
+                </span>
+
+            <ol class="list-decimal pl-10 space-y-2 text-white">
+                <li>
+                    เพื่อสร้างเว็บแอปพลิเคชันสื่อการสอนเรื่องการเคลื่อนที่ของฟันเทียม
+                    สำหรับนักศึกษาและอาจารย์คณะทันตแพทยศาสตร์ ให้นักศึกษาและอาจารย์ใช้งาน
+                </li>
+                <li>
+                    เพื่อสร้างสื่อการสอนในรูปแบบ 2D แอนิเมชันและ 3D
+                    แอนิเมชันเรื่องการเคลื่อนที่ของฟันเทียมสำหรับนักศึกษาคณะทันตแพทยศาสตร์
+                </li>
+                <li>
+                    เพื่อสร้างสื่อการสอนในรูปแบบ AR เรื่องการเคลื่อนที่ของฟันเทียม
+                </li>
+            </ol>
+
+            </p>
+            <br />
+            <p><span class="font-semibold text-teal-300">หน้าที่ที่รับผิดชอบ:</span></p>
+            <ul class="list-disc list-inside space-y-1 ml-6">
+                <li>สร้างสื่อ 2D แอนิเมชัน</li>
+                <li>พัฒนาฟังก์ชันสื่อการสอน 2D แอนิเมชัน</li>
+                <li>พัฒนาฟังก์ชันสื่อการสอน 3D โมเดล</li>
+                <li>พัฒนาฟังก์ชันสื่อการสอน AR</li>
+                <li>พัฒนาฟังก์ชันการเขียนเลกเชอร์บนสื่อการสอน</li>
+                <li>พัฒนาฟังก์ชันจัดการประวัติการเลกเชอร์</li>
+                <li>พัฒนาฟังก์ชันค้นหาสื่อการสอน</li>
+                <li>พัฒนาฟังก์ชันจัดการบุ๊กมาร์ก</li>
+                <li>พัฒนาระบบแชทแบบเรียลไทม์</li>
+                <li>เขียน Test Case เพื่อทดสอบระบบ</li>
+                <li>Deploy ระบบ</li>
+            </ul>
+            <br />
+            <p><span class=" text-teal-300 text-base"><i class=" text-teal-300 text-base">* หมายเหตุ:</span>
+                โปรเจกต์นี้ออกแบบมาเพื่อใช้งานภายในคณะทันตแพทยศาสตร์
+                ดังนั้นสามารถดูฟีเจอร์การทำงานของระบบตามวิดีโอด้านล่างได้</i></p>
+        </div>
+
+        <div class="vdo grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="vdo-list">
+                <iframe class="w-full aspect-video rounded-lg shadow-md"
+                    src="https://www.youtube.com/embed/CQzMev5uzX4?si=WD0s6VfK8R9o2p14" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p class="p-detail mt-2 text-center text-gray-300 text-sm">
+                    เว็บแอปพลิเคชันสื่อการสอน เรื่องการเคลื่อนที่ของฟันเทียมสำหรับนักศึกษา
+                    และอาจารย์คณะทันตแพทยศาสตร์ มหาวิทยาลัยขอนแก่น
+                </p>
+            </div>
+            <div class="vdo-list">
+                <iframe class="w-full aspect-video rounded-lg shadow-md"
+                    src="https://www.youtube.com/embed/A7xTCqf0KaY?si=JvYi87ll_5--XTHy" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p class="p-detail mt-2 text-center text-gray-300 text-sm">
+                    แนะนำการใช้งาน สื่อการสอนรูปแบบ 3D Animation
+                </p>
+            </div>
+            <div class="vdo-list">
+                <iframe class="w-full aspect-video rounded-lg shadow-md"
+                    src="https://www.youtube.com/embed/qukkr3Wh65M?si=r8t2Sl7BNll_0A0T" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p class="p-detail mt-2 text-center text-gray-300 text-sm">
+                    แนะนำการใช้งาน สื่อการสอนรูปแบบ AR
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--------------------------------------------------  Skills  -------------------------------------------------->
+
+    <section id="Skills" class="max-w-6xl mx-auto mt-40 text-white py-16 px-4">
+        <h2 class="text-3xl font-medium text-teal-400 text-center mb-12">ทักษะ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Frontend -->
+            <div class="bg-black/30   p-6 rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold text-teal-300 mb-8 text-center ">Frontend</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Repeat this block for each tool -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/frontend/html.png" alt="HTML" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">HTML</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/frontend/css.png" alt="CSS" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">CSS</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/frontend/tailwind.svg" alt="Tailwind" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Tailwind CSS</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/frontend/boostrap.png" alt="Bootstrap" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Bootstrap</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/frontend/javaScript.png" alt="JavaScript" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">JavaScript</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/frontend/react.png" alt="React" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">React</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-black/30  p-6 rounded-2xl shadow-lg">
+                <h4 class="text-xl font-semibold text-teal-300 mb-8 text-center">Backend</h4>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/backend/nodejs.png" alt="NodeJS" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm text-white">NodeJS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="bg-black/30  p-6 rounded-2xl shadow-lg">
+                <h4 class="text-xl font-semibold text-teal-300 mb-8 text-center">Database</h4>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/backend/mongoDB.webp" alt="MongoDB" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm text-white">MongoDB</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/backend/mysql.png" alt="MySQL" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm text-white">MySQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deployment -->
+            <div class="bg-black/30  p-6 rounded-2xl shadow-lg">
+                <h4 class="text-xl font-semibold text-teal-300 mb-8 text-center">Deployment</h4>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/backend/railway.png" alt="Railway" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm text-white">Railway</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/backend/render.jpg" alt="Render" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm text-white">Render</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/backend/cpanel.webp" alt="CPanel" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm text-white">CPanel</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="bg-black/30  p-6 rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold text-teal-300 mb-8 text-center">Tools</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/figma.png" alt="Figma" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Figma</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/adobeXD.png" alt="Adobe XD" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Adobe XD</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/VScode.png" alt="VS Code" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">VS Code</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/github.webp" alt="GitHub" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">GitHub</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/git.png" alt="Git" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Git</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/postmann.png" alt="Postman" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Postman</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <img src="image/tools/ThunderClient.avif" alt="Thunder Client" class="w-10 h-10">
+                        </div>
+                        <p class="mt-2 text-sm">Thunder Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <!--------------------------------------------------  Certificates & Awards  -------------------------------------------------->
+    <section class="CertificatesAwards max-w-2xl mx-auto mt-40 p-8 rounded-2xl text-gray-100" id="CertificatesAwards">
+
+        <h2 class="text-3xl font-medium text-teal-300 text-center mb-12 tracking-wide">เกียรติบัตรและรางวัล</h2>
+
+        <!-- Certificate 1 -->
+        <div
+            class="bg-black/30  transition-all duration-300 rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center gap-6 shadow-md">
+            <div class="flex-1">
+                <p class="text-xl font-semibold mb-2 text-white">
+                    Information Technology Passport Examination (IP)
+                </p>
+                <p class="text-sm text-gray-300">
+                    วันที่ออกใบรับรอง: 1 ธันวาคม 2566
+                </p>
+            </div>
+            <div class="flex-shrink-0">
+                <img src="image/cert.png" alt="ใบรับรอง IP"
+                    class="max-h-40 w-auto rounded-xl cursor-pointer border border-gray-500 hover:scale-105 transition-transform duration-300"
+                    onclick="showFullscreen(this.src)">
+            </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div
+            class="bg-black/30 transition-all duration-300 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 shadow-md">
+            <div class="flex-shrink-0 order-2 md:order-1">
+                <img src="image/nsc.jpg" alt="เกียรติบัตร NSC"
+                    class="max-h-40 w-auto rounded-xl cursor-pointer border border-gray-500 hover:scale-105 transition-transform duration-300"
+                    onclick="showFullscreen(this.src)">
+
+            </div>
+            <div class="flex-1 order-1 md:order-2">
+                <p class="text-xl font-semibold mb-2 text-white">
+                    The 26th National Software Contest: NSC 2024
+                </p>
+                <p class="text-sm text-gray-300 mb-1">
+                    วันที่ได้เกียรติบัตร: 1 สิงหาคม 2567
+                </p>
+                <p class="text-sm text-gray-300 italic">
+                    “เว็บแอปพลิเคชันสื่อการสอนเรื่องการเคลื่อนที่ของฟันเทียมสำหรับนักศึกษา
+                    และอาจารย์คณะทันตแพทยศาสตร์”
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--------------------------------------------------  Contact  -------------------------------------------------->
+
+    <section class="Contact max-w-3xl mx-auto mt-40 mb-0 p-8 bg-black/30 rounded-2xl shadow-lg text-gray-200"
+        id="Contact">
+        <h2 class="text-3xl font-medium text-teal-300 mb-8 text-center tracking-wide">ข้อมูลติดต่อ</h2>
+
+        <div class="flex flex-col gap-6">
+            <p class="Contact-info flex items-center gap-4 text-lg">
+                <img src="image/icon/ion_call.png" alt="Phone" class="icon-contact w-7 h-7">
+                <span>099-340-0522</span>
+            </p>
+            <p class="Contact-info flex items-center gap-4 text-lg">
+                <img src="image/icon/material-symbols_mail.png" alt="Email" class="icon-contact w-7 h-7">
+                <span>kanthima.char@gmail.com</span>
+            </p>
+            <p class="Contact-info flex items-center gap-4 text-lg">
+                <img src="image/icon/mdi_address-marker.png" alt="Address" class="icon-contact w-7 h-7">
+                <span>99 ถนนสุขาภิบาล ๕ แขวงออเงิน เขตสายไหม กรุงเทพมหานคร 10220</span>
+            </p>
+            <p class="Contact-info flex items-center gap-4 text-lg">
+                <img src="image/icon/mdi_github.png" alt="GitHub" class="icon-contact w-7 h-7">
+                <span>
+                    <a href="https://github.com/irissai" target="_blank" rel="noopener noreferrer"
+                        class="text-teal-300 hover:underline">
+                        https://github.com/irissai
+                    </a>
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- <hr class="hr-end border-gray-600 max-w-3xl mx-auto"> -->
+
+
+    <!-- Fullscreen Image  -->
+    <div id="fullscreen" onclick="hideFullscreen()"
+        class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+        <img id="fullImage" src="" class="max-w-full max-h-full rounded-xl border-4 border-white shadow-xl">
     </div>
-
     <script src="script.js"></script>
 </body>
 
