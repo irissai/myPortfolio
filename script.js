@@ -4,7 +4,7 @@ ScrollReveal().reveal('section', {
   duration: 600,
   easing: 'ease-in-out',
   opacity: 0,
-  reset: false // ❗ ปิดเพื่อให้ตำแหน่งคงที่
+  reset: false 
 });
 
 
